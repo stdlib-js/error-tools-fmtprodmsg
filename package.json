@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/error-tools-fmtprodmsg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Format an error message for production.",
   "license": "Apache-2.0",
   "author": {
