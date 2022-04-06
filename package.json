@@ -36,14 +36,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-has-own-property": "^0.0.x",
-    "@stdlib/assert-is-plain-object": "^0.0.x",
-    "@stdlib/assert-is-string": "^0.0.x",
-    "@stdlib/string-format": "^0.0.x",
-    "@stdlib/string-replace": "^0.0.x",
-    "@stdlib/types": "^0.0.x",
-    "@stdlib/utils-copy": "^0.0.x",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.x"
+    "@stdlib/types": "^0.0.x"
   },
   "devDependencies": {
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",

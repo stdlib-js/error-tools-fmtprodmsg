@@ -57,54 +57,6 @@ var msg = formatProdErrorMessage( '27', 'foo', 'bar' );
 // returns 'Minified stdlib error code: 27. Visit https://stdlib.io/docs/api/latest/error-decoder.html?code=27&arg[]=foo&arg[]=bar for the full message.'
 ```
 
-#### formatProdErrorMessage.factory( options )
-
-Returns a `function` which formats an error message for production.
-
-```javascript
-var opts = {};
-var fcn = formatProdErrorMessage.factory( opts );
-// returns <Function>
-
-var msg = fcn( '3' );
-// returns 'Minified stdlib error code: 3. Visit https://stdlib.io/docs/api/latest/error-decoder.html?code=3 for the full message.'
-```
-
-The function accepts the following `options`:
-
--   **url**: website URL for full error message.
--   **message**: error message template with `{{url}}` and `{{code}}` placeholders that will be replaced.
-
-To set a custom URL, use the `url` option:
-
-```javascript
-var opts = {
-    'url': 'https://stdlib.io/error-decoder.html'
-};
-
-var fcn = formatProdErrorMessage.factory( opts );
-// returns <Function>
-
-var msg = fcn( '8' );
-// returns 'Minified stdlib error code: 8. Visit https://stdlib.io/error-decoder.html?code=8 for the full message.'
-```
-
-To change the error message template, use the `message` option:
-
-```javascript
-var opts = {
-    'message': 'Error code: {{code}}. See: {{url}}.'
-};
-
-var fcn = formatProdErrorMessage.factory( opts );
-// returns <Function>
-
-var msg = fcn( '27', 'foo', 'bar' );
-// returns 'Error code: 27. See: https://stdlib.io/docs/api/latest/error-decoder.html?code=27&arg[]=foo&arg[]=bar.'
-```
-
-</section>
-
 <!-- /.usage -->
 
 <section class="examples">
