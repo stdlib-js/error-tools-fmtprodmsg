@@ -24,30 +24,32 @@ limitations under the License.
 
 > Format an error message for production.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/error-tools-fmtprodmsg
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var fmtprodmsg = require( '@stdlib/error-tools-fmtprodmsg' );
+fmtprodmsg = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@umd/bundle.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@umd/bundle.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.fmtprodmsg;
+})();
+</script>
 ```
 
 #### fmtprodmsg( code, ...args )
@@ -77,8 +79,13 @@ var msg = fmtprodmsg( '27', 'foo', 'bar' );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var fmtprodmsg = require( '@stdlib/error-tools-fmtprodmsg' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@umd/bundle.js"></script>
+<script type="text/javascript">
+(function () {
 
 var msg = fmtprodmsg( '3', 'foo' );
 // returns 'https://stdlib.io/e?code=3&arg[]=foo'
@@ -88,6 +95,11 @@ msg = fmtprodmsg( '5', 'foo', 'bar' );
 
 msg = fmtprodmsg( '5', 'foo', 'bar', 123 );
 // returns 'https://stdlib.io/e/5?arg[]=foo&arg[]=bar&arg[]=123'
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
