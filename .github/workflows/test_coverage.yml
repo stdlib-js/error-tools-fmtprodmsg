@@ -90,14 +90,18 @@ jobs:
           coverage=`cat reports/coverage/lcov-report/index.html | grep "fraction" | grep -oP '\d+/\d+' | printf %s "$(cat)" | jq -R -s -c 'split("\n")'`
           echo "::set-output name=coverage::$coverage"
 
+          # Format coverage as Markdown table row:
+          table=`echo $coverage | sed -e 's/,/|/g; s/"/ /g; s/\[/|/; s/\]/|/'`
+          echo "::set-output name=table::$table"
+
       # Print coverage report to GitHub Actions log:
       - name: 'Print coverage report to GitHub Actions log'
         run: |
           echo "## Coverage Report" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Statements | Branches | Functions | Lines | "  >> $GITHUB_STEP_SUMMARY
+          echo "| Statements | Branches | Functions | Lines | " >> $GITHUB_STEP_SUMMARY
           echo "| ---------- | -------- | --------- | ----- | " >> $GITHUB_STEP_SUMMARY
-          echo "| ${{ steps.extract-coverage.outputs.coverage[0] }} | ${{ steps.extract-coverage.outputs.coverage[1] }} | ${{ steps.extract-coverage.outputs.coverage[2] }} | ${{ steps.extract-coverage.outputs.coverage[3] }} | " >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.extract-coverage.outputs.table }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
       # Send Slack notification if job fails:
