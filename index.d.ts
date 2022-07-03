@@ -16,18 +16,24 @@
 * limitations under the License.
 */
 
-import fmtprodmsg = require( './index' );
+// TypeScript Version: 2.0
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+/**
+* Formats an error message for production.
+*
+* @param code - error code
+* @param ...args - error message arguments
+* @returns formatted error message
+*
+* @example
+* var msg = fmtprodmsg( '3', 'wrong_type' );
+* // returns <string>
+*/
+declare function fmtprodmsg( code: any, ...args: Array<any> ): string;
 
 
-// TESTS //
+// EXPORTS //
 
-// The function returns an string...
-{
-	fmtprodmsg( '1' ); // $ExpectType string
-	fmtprodmsg( '3', 'wrong_type' ); // $ExpectType string
-}
-
-// The compiler throws an error if the function is not provided at least one argument...
-{
-	fmtprodmsg(); // $ExpectError
-}
+export = fmtprodmsg;
