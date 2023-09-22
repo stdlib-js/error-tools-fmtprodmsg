@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import fmtprodmsg from 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/error-tools-fmtprodmsg/tags). For example,
+
+```javascript
 import fmtprodmsg from 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@v0.1.0-deno/mod.js';
 ```
 
@@ -73,7 +78,7 @@ var msg = fmtprodmsg( '27', 'foo', 'bar' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import fmtprodmsg from 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@v0.1.0-deno/mod.js';
+import fmtprodmsg from 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@deno/mod.js';
 
 var msg = fmtprodmsg( '3', 'foo' );
 // returns 'https://stdlib.io/e?code=3&arg[]=foo'
