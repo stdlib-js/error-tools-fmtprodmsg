@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/error-tools-fmtprodmsg",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Format an error message for production.",
   "license": "Apache-2.0",
   "author": {
@@ -35,7 +35,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/types": "^0.3.1"
+    "@stdlib/types": "^0.3.2"
   },
   "devDependencies": {
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
