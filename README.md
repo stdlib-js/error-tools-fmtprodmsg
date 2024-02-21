@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import fmtprodmsg from 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@esm/index.mjs';
+import fmtprodmsg from 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@v0.2.1-esm/index.mjs';
 ```
 
 #### fmtprodmsg( code, ...args )
@@ -78,7 +78,7 @@ var msg = fmtprodmsg( '27', 'foo', 'bar' );
 <body>
 <script type="module">
 
-import fmtprodmsg from 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@esm/index.mjs';
+import fmtprodmsg from 'https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@v0.2.1-esm/index.mjs';
 
 var msg = fmtprodmsg( '3', 'foo' );
 // returns 'https://stdlib.io/e?code=3&arg[]=foo'
