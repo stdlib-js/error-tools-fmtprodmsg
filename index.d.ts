@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2022 The Stdlib Authors.
@@ -16,25 +16,24 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
 /**
-* Format an error message for production.
+* Formats an error message for production.
 *
-* @module @stdlib/error-tools-fmtprodmsg
+* @param code - error code
+* @param ...args - error message arguments
+* @returns formatted error message
 *
 * @example
-* var fmtprodmsg = require( '@stdlib/error-tools-fmtprodmsg' );
-*
 * var msg = fmtprodmsg( '3', 'wrong_type' );
 * // returns <string>
 */
-
-// MAIN //
-
-var main = require( './main.js' );
+declare function fmtprodmsg( code: any, ...args: Array<any> ): string;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = fmtprodmsg;
