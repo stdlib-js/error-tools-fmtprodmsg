@@ -35,7 +35,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/types": "^0.4.1"
+    "@stdlib/types": "^0.4.3"
   },
   "devDependencies": {
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
